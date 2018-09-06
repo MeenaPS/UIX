@@ -1,0 +1,58 @@
+@import '~sass/helpers/variables';
+@import '~sass/helpers/mixins';
+@import '~sass/helpers/helpers';
+@import '~sass/helpers/placeholders';
+
+
+.top-content-block{
+  font-family:$Roboto-Regular;
+}
+nav{
+  min-height:rem(80px);
+  font-family:$Roboto-Regular;
+  @extend %width-100percentage;
+  z-index: map-get($z-index, nav);
+  background: $White;
+  .navbar-header{
+    .navbar-toggle{
+      margin-top:rem(22px);
+      @extend %border-radius;
+      &:hover{
+        background: $White;
+      }
+    }
+  }
+  ul.navbar-nav{
+    margin-top:rem(15px);
+    li{
+      ul{
+        li{
+          a{
+            @include linx(#6e6e6e, #222, #222, #222);
+          }
+        }
+      }
+      &.open, &.active{
+        a{
+          background: $White;
+          color:$CornflowerBlue;
+        }
+      }
+
+      a{
+        @include linx(#6e6e6e, #222, #222, #222);
+      }
+    }
+  }
+  .navbar-brand{
+    img{
+      max-width:rem(150px);
+    }
+  }
+}
+
+.sample-text{
+  font-size: rem(16px);
+  font-family:$Roboto-Regular;
+  color:$Boulder;
+}
